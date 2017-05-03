@@ -14,6 +14,8 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
+import 'hammerjs';
+import { MaterialModule } from '@angular/material';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -51,10 +53,8 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    AboutComponent,
     HomeComponent,
     NoContentComponent,
-    XLargeDirective
   ],
   /**
    * Import Angular's modules.
@@ -63,6 +63,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   /**
@@ -130,5 +131,4 @@ export class AppModule {
     store.disposeOldHosts();
     delete store.disposeOldHosts;
   }
-
 }
