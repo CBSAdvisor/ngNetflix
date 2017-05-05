@@ -19,6 +19,7 @@ import { AppState } from './app.service';
   template: `
     <nav>
       NAVIGATION CONTENT...
+      <button  md-mini-fab>AAAAAA</button>
       <img src="../assets/img/angular-logo.png" />
     </nav>
 
