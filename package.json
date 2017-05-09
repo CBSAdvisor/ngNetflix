@@ -48,7 +48,7 @@
     "protractor:live": "protractor --elementExplorer",
     "rimraf": "rimraf",
     "server:dev:hmr": "npm run server:dev -- --inline --hot",
-    "server:dev": "npm run webpack-dev-server -- --config config/webpack.dev.js --open --progress --profile --watch --content-base src/",
+    "server:dev": "npm run webpack-dev-server -- --config config/webpack.dev.js --progress --profile --watch --content-base src/",
     "server:prod": "http-server dist -c-1 --cors",
     "server:prod:ci": "http-server dist -p 3000 -c-1 --cors",
     "server": "npm run server:dev",
@@ -94,6 +94,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "~4.0.3",
+    "@angular/flex-layout": "^2.0.0-beta.8",
     "@types/hammerjs": "^2.0.34",
     "@types/jasmine": "2.5.45",
     "@types/node": "^7.0.13",

@@ -15,7 +15,15 @@ import {
   PreloadAllModules
 } from '@angular/router';
 import 'hammerjs';
-import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {
+  MdButtonModule,
+  MdCheckboxModule,
+  MdToolbarModule,
+  MdMenuModule,
+  MdIconModule
+} from '@angular/material';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -53,6 +61,7 @@ type StoreType = {
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
     NoContentComponent,
   ],
   /**
@@ -60,10 +69,15 @@ type StoreType = {
    */
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     FormsModule,
     HttpModule,
     MdButtonModule,
     MdCheckboxModule,
+    MdToolbarModule,
+    MdMenuModule,
+    MdIconModule,
     RouterModule.forRoot(ROUTES, {
       useHash: true,
       preloadingStrategy: PreloadAllModules
