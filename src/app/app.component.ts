@@ -15,28 +15,14 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
-  template: `
-    <nav>
-      NAVIGATION CONTENT...
-      <button  md-mini-fab>AAAAAA</button>
-      <img src="../assets/img/angular-logo.png" />
-    </nav>
-
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-
-    <footer>
-      <span>Designed by CBSAdvisor</span>
-    </footer>
-  `
+  styleUrls: ['./app.component.scss'],
+  templateUrl: `./app.component.html`
 })
 export class AppComponent implements OnInit {
 
-  constructor(
-    public appState: AppState
-  ) {}
+  constructor(public appState: AppState) {
+
+  }
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
