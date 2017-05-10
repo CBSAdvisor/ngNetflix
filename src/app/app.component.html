@@ -2,7 +2,7 @@
   <md-toolbar color="primary" fxFlex="0 0 auto">
     <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
       <img src="../assets/img/logo.png" width="24px" />
-      <span>NETFLIX</span>
+      <span class="app-title" [routerLink]="['/']">NETFLIX</span>
     </span>
     <span fxFlex="1 0 auto"></span>
     <button md-icon-button [md-menu-trigger-for]="menu">
@@ -10,8 +10,9 @@
     </button>
   </md-toolbar>
   <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item [routerLink]="['/fog']">FoG</button>
     <button md-menu-item>Settings</button>
-    <button md-menu-item>About</button>
+    <button md-menu-item [routerLink]="['/about']">About</button>
   </md-menu>
 
   <div fxLayout="row" fxFlex="1 1 100%">
