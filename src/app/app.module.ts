@@ -79,7 +79,7 @@ type StoreType = {
     MdMenuModule,
     MdIconModule,
     RouterModule.forRoot(ROUTES, {
-      useHash: false,
+      useHash: true,
       preloadingStrategy: PreloadAllModules
     })
   ],
