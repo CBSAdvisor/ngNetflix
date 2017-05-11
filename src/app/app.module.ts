@@ -22,7 +22,9 @@ import {
   MdCheckboxModule,
   MdToolbarModule,
   MdMenuModule,
-  MdIconModule
+  MdIconModule,
+  MdSidenavModule,
+  MdListModule
 } from '@angular/material';
 
 /*
@@ -78,8 +80,10 @@ type StoreType = {
     MdToolbarModule,
     MdMenuModule,
     MdIconModule,
+    MdSidenavModule,
+    MdListModule,
     RouterModule.forRoot(ROUTES, {
-      useHash: true,
+      useHash: false,
       preloadingStrategy: PreloadAllModules
     })
   ],
