@@ -5,8 +5,8 @@ import {
 
 @Component({
   selector: 'fog',
-  styleUrls: ['./fog.component.scss'],
-  templateUrl: './fog.component.html'
+  templateUrl: './fog.component.html',
+  styleUrls: ['./fog.component.scss']
 })
 export class FoGComponent implements OnInit {
 
