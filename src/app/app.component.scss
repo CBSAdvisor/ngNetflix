@@ -1,16 +1,38 @@
 /* <link href=”https://fonts.googleapis.com/icon?family=Material+Icons" rel=”stylesheet”> */
 html, body{
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
   margin: 0;
 }
 
 app {
-  align-items: stretch;
+  display: flex;
   height: 100%;
 }
 
 .app-title {
   cursor: pointer;
   font-weight: bold;
+}
+
+.app-sideNav {
+  padding: 10px;
+  min-width: 100px;
+}
+
+.app-icon-button {
+  box-shadow: none;
+  user-select: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  filter: none;
+  font-weight: normal;
+  height: auto;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
 }
