@@ -1,38 +1,13 @@
 <div fxLayout="row" fxLayoutWrap fxFlex="0 1 auto" class="fog">
-  <md-card>
+
+  <md-card *ngFor="let hero of heroes$ | async">
     <div class="mat-card-header">
       <img md-card-avatar class="hero-avatar" src="../../assets/img/FoG/gladiator.png">
       <div class="mat-card-header-text">
-        <div class="mat-card-title hero-title">Gladiator</div>
-        <div class="mat-card-subtitle">Warrior</div>
+        <div class="mat-card-title hero-title">{{hero.title}}</div>
+        <div class="mat-card-subtitle">{{hero.class}}</div>
       </div>
     </div>
   </md-card>
-  <md-card>
-    <div class="mat-card-header">
-      <img md-card-avatar class="hero-avatar" src="../../assets/img/FoG/gladiator.png">
-      <div class="mat-card-header-text">
-        <div class="mat-card-title hero-title">Gladiator</div>
-        <div class="mat-card-subtitle">Warrior</div>
-      </div>
-    </div>
-  </md-card>
-  <md-card>
-    <div class="mat-card-header">
-      <img md-card-avatar class="hero-avatar" src="../../assets/img/FoG/gladiator.png">
-      <div class="mat-card-header-text">
-        <div class="mat-card-title hero-title">Gladiator</div>
-        <div class="mat-card-subtitle">Warrior</div>
-      </div>
-    </div>
-  </md-card>
-  <md-card>
-    <div class="mat-card-header">
-      <img md-card-avatar class="hero-avatar" src="../../assets/img/FoG/gladiator.png">
-      <div class="mat-card-header-text">
-        <div class="mat-card-title hero-title">Gladiator</div>
-        <div class="mat-card-subtitle">Warrior</div>
-      </div>
-    </div>
-  </md-card>
+
 </div>
