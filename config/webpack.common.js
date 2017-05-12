@@ -201,7 +201,7 @@ module.exports = function (options) {
         */
         {
           test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
-          use: 'file-loader'
+          use: 'file-loader?name=[hash].[ext]&outputPath=assets/fonts/'
         }
 
       ],
