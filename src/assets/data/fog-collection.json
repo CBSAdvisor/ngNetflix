@@ -1,0 +1,17 @@
+[
+  {
+    "id": "0805AE42A9294044B313BDAA0AED137D",
+    "title": "Gladiator",
+    "class": "Warrior"
+  },
+  {
+    "id": "B26F7C749EC645538274C5F4D2DF5A15",
+    "title": "Pyromancer",
+    "class": "Mage"
+  },
+  {
+    "id": "1F2F9579D49544B1A4506CF7E5976960",
+    "title": "Assassin",
+    "class": "Rogue"
+  }
+]
