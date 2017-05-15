@@ -8,10 +8,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { routes } from './fog.routes';
 import { FoGComponent } from './fog.component';
 import { FoGService } from './fog.service';
+import { FoGHeroesCollectionComponent } from './fog-heroes-collection';
 
 @NgModule({
   declarations: [
     FoGComponent,
+    FoGHeroesCollectionComponent
   ],
   imports: [
     CommonModule,
