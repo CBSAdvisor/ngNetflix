@@ -1,0 +1,20 @@
+:host {
+  min-width: 220px;
+}
+
+.hero-card {
+}
+
+.hero-avatar {
+  height: 0.75 * 82px;
+  width: 0.75 * 82px;
+  border-radius: 10%;
+}
+
+.hero-title {
+  text-transform: uppercase;
+}
+
+.mat-card-header-text {
+  padding: 8px 0;
+}
