@@ -39,9 +39,11 @@ const METADATA = {
  * Webpack configuration
  *
  * See: http://webpack.github.io/docs/configuration.html#cli
+ * @param {object} options External build options
+ * @returns {object} Webpack configuration
  */
 module.exports = function (options) {
-  isProd = options.env === 'production';
+  const isProd = options.env === 'production';
   return {
 
     /**
@@ -84,7 +86,7 @@ module.exports = function (options) {
       /**
        * An array of directory names to be resolved to the current directory
        */
-      modules: [helpers.root('src'), helpers.root('node_modules')],
+      modules: [helpers.root('src'), helpers.root('node_modules')]
 
     },
 
@@ -132,14 +134,14 @@ module.exports = function (options) {
               }
             },
             {
+              loader: 'angular2-template-loader'
+            },
+            {
               loader: 'awesome-typescript-loader',
               options: {
                 configFileName: 'tsconfig.webpack.json',
                 useCache: !isProd
               }
-            },
-            {
-              loader: 'angular2-template-loader'
             }
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
@@ -204,7 +206,7 @@ module.exports = function (options) {
           use: 'file-loader?name=[hash].[ext]&outputPath=assets/fonts/'
         }
 
-      ],
+      ]
 
     },
 
@@ -255,7 +257,7 @@ module.exports = function (options) {
       }),
       new CommonsChunkPlugin({
         name: ['manifest'],
-        minChunks: Infinity,
+        minChunks: Infinity
       }),
 
       /**
@@ -391,7 +393,7 @@ module.exports = function (options) {
        *
        * https://github.com/szrenwei/inline-manifest-webpack-plugin
        */
-      new InlineManifestWebpackPlugin(),
+      new InlineManifestWebpackPlugin()
     ],
 
     /**
@@ -410,4 +412,4 @@ module.exports = function (options) {
     }
 
   };
-}
+};

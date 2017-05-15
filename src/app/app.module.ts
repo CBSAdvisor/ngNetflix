@@ -12,7 +12,7 @@ import {
 } from '@angularclass/hmr';
 import {
   RouterModule,
-  PreloadAllModules
+  // PreloadAllModules
 } from '@angular/router';
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -83,8 +83,8 @@ type StoreType = {
     MdSidenavModule,
     MdListModule,
     RouterModule.forRoot(ROUTES, {
-      useHash: false,
-      preloadingStrategy: PreloadAllModules
+      // useHash: false,
+      // preloadingStrategy: PreloadAllModules
     })
   ],
   /**
