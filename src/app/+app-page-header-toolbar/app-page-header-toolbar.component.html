@@ -1,1 +1,21 @@
-<div>APP PAGE HEADER TOOLBAR</div>
+<md-toolbar color="primary">
+      <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <button md-icon-button class="app-icon-button">
+          <md-icon>menu</md-icon>
+        </button>
+        <img src="../assets/img/logo.png" width="24px"/>
+        <span class="app-title" [routerLink]="['/']">NETFLIX</span>
+      </span>
+  <span fxFlex="1 0 auto"></span>
+  <button md-icon-button [md-menu-trigger-for]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+</md-toolbar>
+<md-menu x-position="before" #menu="mdMenu">
+  <button md-menu-item>Action #01-01</button>
+  <button md-menu-item>Action #01-02</button>
+  <button md-menu-item>Action #01-03</button>
+  <button md-menu-item>Action #01-04</button>
+  <button md-menu-item>Action #01-05</button>
+  <button md-menu-item>Action #01-06</button>
+</md-menu>

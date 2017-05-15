@@ -1,5 +1,4 @@
 <md-sidenav-container fxLayout="column" fxFlexFill class="mat-app-background">
-  <app-page-header-toolbar></app-page-header-toolbar>
   <md-sidenav #sidenav mode="push" class="app-sideNav">
     <md-nav-list>
       <md-list-item [routerLink]="['/fog']">FoG</md-list-item>
@@ -12,28 +11,29 @@
   </md-sidenav>
 
   <div fxLayout="column" fxFlexFill style="padding: 8px">
+    <app-page-header-toolbar></app-page-header-toolbar>
     <!-- Page header -->
-    <md-toolbar color="primary">
-      <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
-        <button md-icon-button class="app-icon-button" (click)="sidenav.toggle()">
-          <md-icon>menu</md-icon>
-        </button>
-        <img src="../assets/img/logo.png" width="24px"/>
-        <span class="app-title" [routerLink]="['/']">NETFLIX</span>
-      </span>
-      <span fxFlex="1 0 auto"></span>
-      <button md-icon-button [md-menu-trigger-for]="menu">
-        <md-icon>more_vert</md-icon>
-      </button>
-    </md-toolbar>
-    <md-menu x-position="before" #menu="mdMenu">
-      <button md-menu-item>Action #01-01</button>
-      <button md-menu-item>Action #01-02</button>
-      <button md-menu-item>Action #01-03</button>
-      <button md-menu-item>Action #01-04</button>
-      <button md-menu-item>Action #01-05</button>
-      <button md-menu-item>Action #01-06</button>
-    </md-menu>
+    <!--<md-toolbar color="primary">-->
+      <!--<span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">-->
+        <!--<button md-icon-button class="app-icon-button" (click)="sidenav.toggle()">-->
+          <!--<md-icon>menu</md-icon>-->
+        <!--</button>-->
+        <!--<img src="../assets/img/logo.png" width="24px"/>-->
+        <!--<span class="app-title" [routerLink]="['/']">NETFLIX</span>-->
+      <!--</span>-->
+      <!--<span fxFlex="1 0 auto"></span>-->
+      <!--<button md-icon-button [md-menu-trigger-for]="menu">-->
+        <!--<md-icon>more_vert</md-icon>-->
+      <!--</button>-->
+    <!--</md-toolbar>-->
+    <!--<md-menu x-position="before" #menu="mdMenu">-->
+      <!--<button md-menu-item>Action #01-01</button>-->
+      <!--<button md-menu-item>Action #01-02</button>-->
+      <!--<button md-menu-item>Action #01-03</button>-->
+      <!--<button md-menu-item>Action #01-04</button>-->
+      <!--<button md-menu-item>Action #01-05</button>-->
+      <!--<button md-menu-item>Action #01-06</button>-->
+    <!--</md-menu>-->
 
     <!-- Page content -->
     <div fxLayout="row"  fxFlex="1 1 100%">

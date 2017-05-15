@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
     MdButtonModule,
@@ -19,6 +20,7 @@ import { AppPageHeaderToolbarComponent } from './app-page-header-toolbar.compone
         AppPageHeaderToolbarComponent
     ],
     imports: [
+        RouterModule,
         FlexLayoutModule,
         MdButtonModule,
         MdCheckboxModule,
