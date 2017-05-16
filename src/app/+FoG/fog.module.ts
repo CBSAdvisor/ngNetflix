@@ -10,6 +10,7 @@ import { FoGComponent } from './fog.component';
 import { FoGService } from './fog.service';
 import { FoGHeroesCollectionComponent } from './fog-heroes-collection';
 import { FoGHeroCardSummaryComponent } from './fog-hero-card-summary';
+import { AppPageHeaderToolbarModule } from '../+app-page-header-toolbar';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { FoGHeroCardSummaryComponent } from './fog-hero-card-summary';
         FlexLayoutModule,
         MdCardModule,
         MdButtonModule,
+        AppPageHeaderToolbarModule,
         RouterModule.forChild(routes)
     ],
     providers: [

@@ -42,6 +42,7 @@ import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+import { AppPageHeaderToolbarService } from "./+app-page-header-toolbar/app-page-header-toolbar.service";
 
 // Application wide providers
 const APP_PROVIDERS = [

@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
     MdButtonModule,
@@ -11,6 +12,7 @@ import {
     MdListModule
 } from '@angular/material';
 import { AppPageHeaderToolbarComponent } from './app-page-header-toolbar.component';
+import { AppPageHeaderToolbarService } from './app-page-header-toolbar.service';
 
 @NgModule({
     declarations: [
@@ -20,6 +22,7 @@ import { AppPageHeaderToolbarComponent } from './app-page-header-toolbar.compone
         AppPageHeaderToolbarComponent
     ],
     imports: [
+        CommonModule,
         RouterModule,
         FlexLayoutModule,
         MdButtonModule,
@@ -32,4 +35,12 @@ import { AppPageHeaderToolbarComponent } from './app-page-header-toolbar.compone
     ]
 })
 export class AppPageHeaderToolbarModule {
+    public static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: AppPageHeaderToolbarModule,
+            providers: [
+                AppPageHeaderToolbarService
+            ]
+        };
+    }
 }
