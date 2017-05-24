@@ -4,52 +4,27 @@
 import {
     Component,
     OnInit,
-    ViewChild,
     ViewEncapsulation
 } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
 import { AppState } from './app.service';
-import {
-    AppPageHeaderToolbarModule,
-    AppPageHeaderToolbarService
-} from './+app-page-header-toolbar';
-import { Observable } from 'rxjs/Observable';
-import { MdSidenav } from '@angular/material';
 
 /**
  * App Component
- * Top Level Component
+ * * Top Level Component
  */
 @Component({
     selector: 'app',
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./app.component.scss'],
     templateUrl: `./app.component.html`,
-    providers: [...AppPageHeaderToolbarModule.forRoot().providers]
+    providers: []
 })
 export class AppComponent implements OnInit {
-    @ViewChild('sideNav') private sideNav: MdSidenav;
-
-    constructor(public appState: AppState,
-                private router: Router,
-                private appPageHeaderToolbarService: AppPageHeaderToolbarService) {
+    constructor(public appState: AppState) {
     }
 
     public ngOnInit() {
         console.log('ON INIT AppComponent');
-
-        this.appPageHeaderToolbarService.changeTitle('NETFLIX');
-        this.appPageHeaderToolbarService.changeSubtitle('');
-
-        this.router.events.subscribe(event => {
-            console.log(`ROUTER Changed AppComponent`);
-
-            if (event instanceof NavigationEnd) {
-                this.appPageHeaderToolbarService.setOnToggleMenuHandler(_ => {
-                    this.sideNav.toggle();
-                });
-            }
-        });
     }
 
 }

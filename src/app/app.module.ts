@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {
@@ -14,8 +13,6 @@ import {
     RouterModule
 } from '@angular/router';
 import 'hammerjs';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {
     MdButtonModule,
     MdCheckboxModule,
@@ -26,7 +23,6 @@ import {
     MdListModule
 } from '@angular/material';
 
-import { AppPageHeaderToolbarModule } from './+app-page-header-toolbar';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -36,13 +32,13 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
+import { SharedModule } from './shared';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
-import { AppPageHeaderToolbarService } from "./+app-page-header-toolbar/app-page-header-toolbar.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -71,11 +67,8 @@ type StoreType = {
      * Import Angular's modules.
      */
     imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        FlexLayoutModule,
-        FormsModule,
         HttpModule,
+        FormsModule,
         MdButtonModule,
         MdCheckboxModule,
         MdToolbarModule,
@@ -83,7 +76,7 @@ type StoreType = {
         MdIconModule,
         MdSidenavModule,
         MdListModule,
-        AppPageHeaderToolbarModule,
+        SharedModule.forRoot(),
         RouterModule.forRoot(ROUTES, {})
     ],
     /**

@@ -11,7 +11,15 @@
   </md-sidenav>
 
   <div fxLayout="column" fxFlexFill style="padding: 8px">
-    <app-page-header-toolbar></app-page-header-toolbar>
+    <md-toolbar color="primary">
+      <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <button md-icon-button class="app-icon-button" (click)="sideNav.toggle()">
+          <md-icon>menu</md-icon>
+        </button>
+        <img src="../assets/img/logo.png" width="24px"/>
+        <span class="app-title" [routerLink]="['/']">TITLE - SUBTITLE</span>
+      </span>
+    </md-toolbar>
 
     <!-- Page content -->
     <div fxLayout="row"  fxFlex="1 1 100%">
