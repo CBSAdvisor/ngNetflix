@@ -1,7 +1,7 @@
 {
-  "name": "angular-starter",
-  "version": "6.0.0",
-  "description": "An Angular Webpack Starter kit featuring Angular (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "ngNetflix",
+  "version": "1.0.1",
+  "description": "A ngNetflix featuring Angular, TypeScript, and Webpack by CBSAdvisor",
   "keywords": [
     "angular",
     "angular2",
@@ -9,7 +9,7 @@
     "webpack",
     "typescript"
   ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
+  "author": "CBSAdvisor",
   "homepage": "https://github.com/AngularClass/angular-starter",
   "license": "MIT",
   "scripts": {
