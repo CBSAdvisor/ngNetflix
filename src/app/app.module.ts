@@ -17,6 +17,9 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { NoContentComponent } from './no-content';
+import { NfxMainModule } from './main/main.module';
+import { NfxSampleModule } from './main/content/sample/sample.module';
+import { SharedModule } from './core/modules/shared.module';
 
 import '../styles/styles.scss';
 
@@ -43,7 +46,11 @@ const APP_PROVIDERS = [];
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
-    })
+    }),
+    /* Application modules */
+    SharedModule,
+    NfxSampleModule,
+    NfxMainModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
