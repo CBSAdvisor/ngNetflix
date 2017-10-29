@@ -12,7 +12,7 @@ import {
  * Top Level Component
  */
 @Component({
-  selector: 'app',
+  selector: 'nfx-root',
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./app.component.css'],
   templateUrl: './app.component.html'
@@ -20,7 +20,8 @@ import {
 export class AppComponent implements OnInit {
   public name = 'ngNatflix';
 
-  constructor() {}
+  constructor() {
+  }
 
   public ngOnInit() {
   }
