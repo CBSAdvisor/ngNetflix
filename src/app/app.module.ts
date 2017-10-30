@@ -8,6 +8,7 @@ import {
 } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
 
 /*
  * Platform and Environment providers/directives/pipes

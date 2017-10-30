@@ -90,6 +90,7 @@
     "@angularclass/hmr": "~2.1.3",
     "@angularclass/hmr-loader": "~3.0.4",
     "core-js": "~2.5.1",
+    "hammerjs": "~2.0.8",
     "http-server": "~0.10.0",
     "ie-shim": "~0.1.0",
     "reflect-metadata": "~0.1.10",
