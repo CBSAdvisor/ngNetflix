@@ -11,7 +11,7 @@
     "color-no-invalid-hex": true,
     "number-no-trailing-zeros": true,
     "selector-type-no-unknown": [true, {
-      "ignoreTypes": []
+      "ignoreTypes": ["fuse-main"]
     }],
     "at-rule-no-unknown": [true, {
       "ignoreAtRules": ["include", "mixin", "for", "if"]
