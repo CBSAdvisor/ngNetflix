@@ -6,6 +6,10 @@
     "stylelint-scss"
   ],
   "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["include", "mixin", "for", "if"]
+    }],
+    "color-hex-case": "upper",
     "color-hex-length": "short",
     "color-named": "always-where-possible",
     "color-no-invalid-hex": true,
@@ -13,8 +17,9 @@
     "selector-type-no-unknown": [true, {
       "ignoreTypes": ["fuse-main"]
     }],
-    "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["include", "mixin", "for", "if"]
-    }]
+    "rule-empty-line-before": ["always", {
+      "except": ["inside-block-and-after-rule", "first-nested"]
+    }],
+    "selector-list-comma-newline-after": "always-multi-line"
   }
 }
