@@ -22,12 +22,15 @@
   <% } %>
 
   <!-- Async Google Analytics: change UA-71073175-1 to be your site's ID -->
-  <script>
-    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-    ga('create', 'UA-71073175-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <!--<script>-->
+    <!--window.ga = window.ga || function () {-->
+      <!--(ga.q = ga.q || []).push(arguments)-->
+    <!--};-->
+    <!--ga.l = +new Date;-->
+    <!--ga('create', 'UA-71073175-1', 'auto');-->
+    <!--ga('send', 'pageview');-->
+  <!--</script>-->
+  <!--<script async src="https://www.google-analytics.com/analytics.js"></script>-->
   <!-- End Google Analytics -->
 
   <!-- CSS will be injected by webpack here -->
@@ -35,11 +38,39 @@
 
 </head>
 
-<body>
+<body class="primary-800-bg">
 
-  <nfx-root>
-    Loading...
-  </nfx-root>
+  <!-- FUSE Splash Screen -->
+  <fuse-splash-screen id="fuse-splash-screen">
+
+    <div class="center">
+
+      <div class="logo">
+        <img width="128" src="assets/images/logos/fuse.svg">
+      </div>
+
+      <!-- Material Design Spinner -->
+      <div class="spinner-wrapper">
+        <div class="spinner">
+          <div class="inner">
+            <div class="gap"></div>
+            <div class="left">
+              <div class="half-circle"></div>
+            </div>
+            <div class="right">
+              <div class="half-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Material Design Spinner -->
+
+    </div>
+
+  </fuse-splash-screen>
+  <!-- / FUSE Splash Screen -->
+
+  <nfx-root></nfx-root>
 
   <!-- Scripts will be injected by webpack here -->
 </body>

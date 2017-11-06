@@ -1,11 +1,9 @@
-/**
- * Angular 2 decorators and services
- */
 import {
   Component,
   OnInit,
   ViewEncapsulation
 } from '@angular/core';
+import { FuseSplashScreenService } from './core/services/splash-screen.service';
 
 /**
  * App Component
@@ -20,7 +18,7 @@ import {
 export class AppComponent implements OnInit {
   public name = 'ngNatflix';
 
-  constructor() {
+  constructor(private fuseSplashScreen: FuseSplashScreenService) {
   }
 
   public ngOnInit() {

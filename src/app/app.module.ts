@@ -18,7 +18,10 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { NoContentComponent } from './no-content';
-import { NfxMainModule } from './main/main.module';
+import { FuseSplashScreenService } from './core/services/splash-screen.service';
+import { FuseConfigService } from './core/services/config.service';
+import { FuseNavigationService } from './core/components/navigation/navigation.service';
+import { FuseMainModule } from './main/main.module';
 import { NfxSampleModule } from './main/content/sample/sample.module';
 import { SharedModule } from './core/modules/shared.module';
 
@@ -51,14 +54,17 @@ const APP_PROVIDERS = [];
     /* Application modules */
     SharedModule,
     NfxSampleModule,
-    NfxMainModule
+    FuseMainModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
    */
   providers: [
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    FuseSplashScreenService,
+    FuseConfigService,
+    FuseNavigationService
   ]
 })
 export class AppModule {
