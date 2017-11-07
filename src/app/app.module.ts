@@ -21,9 +21,10 @@ import { NoContentComponent } from './no-content';
 import { FuseSplashScreenService } from './core/services/splash-screen.service';
 import { FuseConfigService } from './core/services/config.service';
 import { FuseNavigationService } from './core/components/navigation/navigation.service';
+import { SharedModule } from './core/modules/shared.module';
 import { FuseMainModule } from './main/main.module';
 import { NfxSampleModule } from './main/content/sample/sample.module';
-import { SharedModule } from './core/modules/shared.module';
+import { PagesModule } from './main/content/pages/pages.module';
 
 import '../styles/styles.scss';
 
@@ -54,7 +55,8 @@ const APP_PROVIDERS = [];
     /* Application modules */
     SharedModule,
     NfxSampleModule,
-    FuseMainModule
+    FuseMainModule,
+    PagesModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.

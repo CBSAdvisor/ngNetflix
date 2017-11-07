@@ -4,5 +4,5 @@ import { NoContentComponent } from './no-content';
 export const ROUTES: Routes = [
   { path: '', redirectTo: 'sample', pathMatch: 'full' },
   { path: 'nocontent', component: NoContentComponent },
-  { path: '**', component: NoContentComponent }
+  { path: '**', redirectTo: 'not-found' }
 ];
