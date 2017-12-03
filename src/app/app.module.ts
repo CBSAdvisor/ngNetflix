@@ -18,7 +18,7 @@ import { PagesModule } from './main/content/pages/pages.module';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'apps/gemsofwar/kingdoms', pathMatch: 'full' },
   {
-    path: 'apps/gemsofwar/kingdoms',
+    path: 'apps/gemsofwar',
     loadChildren: './main/content/apps/gems-of-war/gems-of-war.module#GemsOfWarModule'
   },
   { path: '**', redirectTo: 'pages/errors/error-404' }
