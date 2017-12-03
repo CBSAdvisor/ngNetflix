@@ -13,12 +13,15 @@ import { FuseConfigService } from './core/services/config.service';
 import { FuseNavigationService } from './core/components/navigation/navigation.service';
 import { FuseSampleModule } from './main/content/sample/sample.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { PagesModule } from './main/content/pages/pages.module';
 
 const appRoutes: Routes = [
-    {
-        path      : '**',
-        redirectTo: 'sample'
-    }
+  { path: '', redirectTo: 'apps/gemsofwar/kingdoms', pathMatch: 'full' },
+  {
+    path: 'apps/gemsofwar/kingdoms',
+    loadChildren: './main/content/apps/gems-of-war/gems-of-war.module#GemsOfWarModule'
+  },
+  { path: '**', redirectTo: 'pages/errors/error-404' }
 ];
 
 @NgModule({
@@ -34,7 +37,8 @@ const appRoutes: Routes = [
         SharedModule,
         TranslateModule.forRoot(),
         FuseMainModule,
-        FuseSampleModule
+        FuseSampleModule,
+      PagesModule
     ],
     providers   : [
         FuseSplashScreenService,
