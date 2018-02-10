@@ -1,4 +1,6 @@
-export class NavigationModel {
+import { FuseNavigationModelInterface } from '../core/components/navigation/navigation.model';
+
+export class FuseNavigationModel implements FuseNavigationModelInterface
   public model: any[];
 
   constructor() {

@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { NgxDnDModule } from '@withinpixels/ngx-dnd';
+import { NgxDnDModule } from '@swimlane/ngx-dnd';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { FuseMatSidenavHelperDirective, FuseMatSidenavTogglerDirective } from '../directives/fuse-mat-sidenav-helper/fuse-mat-sidenav-helper.directive';
@@ -15,13 +15,14 @@ import { FuseConfirmDialogComponent } from '../components/confirm-dialog/confirm
 import { FuseCountdownComponent } from '../components/countdown/countdown.component';
 import { FuseMatchMedia } from '../services/match-media.service';
 import { FuseNavbarVerticalService } from '../../main/navbar/vertical/navbar-vertical.service';
-import { FuseHljsComponent } from '../components/hljs/hljs.component';
+import { FuseHighlightComponent } from '../components/highlight/highlight.component';
 import { FusePerfectScrollbarDirective } from '../directives/fuse-perfect-scrollbar/fuse-perfect-scrollbar.directive';
 import { FuseIfOnDomDirective } from '../directives/fuse-if-on-dom/fuse-if-on-dom.directive';
 import { FuseMaterialColorPickerComponent } from '../components/material-color-picker/material-color-picker.component';
 import { FuseTranslationLoaderService } from '../services/translation-loader.service';
 import { CookieService } from 'ngx-cookie-service';
 import { TranslateModule } from '@ngx-translate/core';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations   : [
@@ -29,7 +30,7 @@ import { TranslateModule } from '@ngx-translate/core';
         FuseMatSidenavTogglerDirective,
         FuseConfirmDialogComponent,
         FuseCountdownComponent,
-        FuseHljsComponent,
+        FuseHighlightComponent,
         FuseIfOnDomDirective,
         FusePerfectScrollbarDirective,
         FuseMaterialColorPickerComponent
@@ -43,7 +44,8 @@ import { TranslateModule } from '@ngx-translate/core';
         ReactiveFormsModule,
         ColorPickerModule,
         NgxDnDModule,
-        NgxDatatableModule
+        NgxDatatableModule,
+        ChartsModule
     ],
     exports        : [
         FlexLayoutModule,
@@ -54,7 +56,7 @@ import { TranslateModule } from '@ngx-translate/core';
         FuseMatSidenavTogglerDirective,
         FusePipesModule,
         FuseCountdownComponent,
-        FuseHljsComponent,
+        FuseHighlightComponent,
         FusePerfectScrollbarDirective,
         ReactiveFormsModule,
         ColorPickerModule,
@@ -62,7 +64,8 @@ import { TranslateModule } from '@ngx-translate/core';
         NgxDatatableModule,
         FuseIfOnDomDirective,
         FuseMaterialColorPickerComponent,
-        TranslateModule
+        TranslateModule,
+        ChartsModule
     ],
     entryComponents: [
         FuseConfirmDialogComponent
