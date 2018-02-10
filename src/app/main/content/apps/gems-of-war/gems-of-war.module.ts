@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../../../../core/modules/shared.module';
 import { GowKingdomsComponent } from './kingdoms/kingdoms.component';
 import { RouterModule, Routes } from '@angular/router';
+import { GoWKingdomsService } from './gems-of-war.service';
 
 const routes: Routes = [
   {
@@ -19,7 +20,9 @@ const routes: Routes = [
   declarations: [
     GowKingdomsComponent
   ],
-  providers: []
+  providers: [
+    GoWKingdomsService
+  ]
 })
 export class GemsOfWarModule {
 }
