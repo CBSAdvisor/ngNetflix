@@ -13,12 +13,17 @@ import { FuseNavigationService } from './core/components/navigation/navigation.s
 import { FuseSampleModule } from './main/content/sample/sample.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { PagesModule } from './main/content/pages/pages.module';
+import { SandboxAppModule } from "./main/content/apps/sandbox-app/sandbox-app.module";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'apps/gemsofwar/kingdoms', pathMatch: 'full' },
   {
     path: 'apps/gemsofwar',
     loadChildren: './main/content/apps/gems-of-war/gems-of-war.module#GemsOfWarModule'
+  },
+  {
+    path        : 'sandbox',
+    loadChildren: './main/content/apps/sandbox-app/sandbox-app.module#SandboxAppModule'
   },
   { path: '**', redirectTo: 'pages/errors/error-404' }
 ];

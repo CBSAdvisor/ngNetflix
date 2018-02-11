@@ -1,0 +1,64 @@
+<div id="orders" class="page-layout carded fullwidth" fusePerfectScrollbar>
+
+  <!-- TOP BACKGROUND -->
+  <div class="top-bg mat-accent-bg"></div>
+  <!-- / TOP BACKGROUND -->
+
+  <!-- CENTER -->
+  <div class="center">
+
+    <!-- HEADER -->
+    <div class="header white-fg"
+         fxLayout="column" fxLayoutAlign="center center">
+
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <img src="assets/showcase/images/primeng-logo.png" style="height: 24px"/>
+      </div>
+      <!-- APP TITLE -->
+      <div class="logo"
+           fxLayout="row" fxLayoutAlign="start center" fxFlexAlign="start">
+        <mat-icon class="logo-icon mr-16" *fuseIfOnDom
+                  [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+          today
+        </mat-icon>
+        <span class="logo-text h1" *fuseIfOnDom
+              [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Calendar</span>
+      </div>
+      <!-- / APP TITLE -->
+
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <div class="content-card mat-white-bg">
+
+      <!-- CONTENT -->
+      <div class="content p-24">
+        <div class="section">
+          <form class="p-24"
+                (ngSubmit)="submit()"
+                [formGroup]="datetimeRangeForm"
+                fxLayout="row"
+                fxLayoutAlign="start center">
+            <mat-form-field>
+              <input matInput placeholder="dd.MM.yy HH:mm" required/>
+              <mat-hint>Include area code</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+              <fuse-mat-datetimepicker formControlName="datetimeFrom"
+                                       placeholder="Phone number"
+                                       required>
+              </fuse-mat-datetimepicker>
+              <mat-hint>Period start.</mat-hint>
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+      <!-- CONTENT -->
+
+    </div>
+    <!-- / CONTENT CARD -->
+
+  </div>
+  <!-- / CENTER -->
+</div>

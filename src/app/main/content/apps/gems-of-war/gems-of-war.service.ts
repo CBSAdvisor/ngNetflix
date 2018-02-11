@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/observable';
+import 'rxjs/add/observable/of';
 import { Kingdom } from './gems-of-war.model';
 
 @Injectable()

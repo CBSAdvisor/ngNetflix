@@ -1,6 +1,6 @@
 import { FuseNavigationModelInterface } from '../core/components/navigation/navigation.model';
 
-export class FuseNavigationModel implements FuseNavigationModelInterface
+export class FuseNavigationModel implements FuseNavigationModelInterface {
   public model: any[];
 
   constructor() {
@@ -26,6 +26,28 @@ export class FuseNavigationModel implements FuseNavigationModelInterface
             ]
           }
         ]
+      },
+      {
+        'id': 'sandbox',
+        'title': 'Sandbox',
+        'type': 'group',
+        'icon': 'apps',
+        'children': [
+          {
+            'id': 'primeNG',
+            'title': 'PrimeNG',
+            'type': 'collapse',
+            'icon': 'layers',
+            'children': [
+              {
+                'id': 'primeng-calendar',
+                'title': 'Calendar',
+                'type': 'item',
+                'icon': 'today',
+                'url': '/sandbox/primeng/calendar'
+              }
+            ]
+          }]
       }
     ];
   }
